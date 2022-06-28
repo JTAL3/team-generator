@@ -5,21 +5,32 @@
 }
 
 body{
-    background-color: ;
+    background-color: #b5b5b5c9;
 }
 
 header{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(128, 0, 128, 0.41);
     padding: 1.75rem;
 }
 
-.card-container{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 1rem; column-gap: 1rem;
-    margin-top: 3rem;
+    row-gap: 2rem; column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    text-align: center;
+}
+
+
+.card-title {
+    padding: 20px;
+    text-align: center;
 }
