@@ -6,7 +6,7 @@ Use the command line to activate this Team Generator app and follow along with t
 
 
 # Installation
-To take advantage of the Team Profile Generator, you must have Git and Node.js installed on your machine. In the terminal, run npm install to download all necessary dependencies.
+In order to access the Profile Generator, you must have Git and Node.js installed on your machine. In the terminal, run npm install to download all necessary dependencies.
 
 
 
