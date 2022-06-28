@@ -22,5 +22,8 @@
   "homepage": "https://github.com/JTAL3/team-generator#readme",
   "devDependencies": {
     "jest": "^28.1.1"
+  },
+  "dependencies": {
+    "inquirer": "^9.0.0"
   }
 }
