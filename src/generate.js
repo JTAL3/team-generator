@@ -1,3 +1,30 @@
+
+
+
+const fs = require("fs");
+
+const writeFile = (fileContent) => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile("./dist/index.html", fileContent, (err) => {
+      // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+      if (err) {
+        reject(err);
+        // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+        return;
+      }
+
+      // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+      resolve({
+        ok: true,
+        message: "Your team has been generated!",
+      });
+    });
+  });
+};
+
+module.exports = { writeFile };
+
+
 // const createTeam = (team) => {
 //     console.log(team);
 //     //empty array to push html elements and loop team data
@@ -71,29 +98,4 @@
 // return html.join('');
 // }
 
-
-
-
-// module.exports = team => {
-//         return `
-//         <!DOCTYPE html>
-//         <html lang="en">
-//         <head>
-//             <meta charset="UTF-8">
-//             <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-//             <script src="https://kit.fontawesome.com/1e0a13a89f.js" crossorigin="anonymous"></script?
-//             <title>Team Generator</title>
-//         </head>
-//         <body>
-//             <header>
-//             <h1>The Crew</h1>
-//             </header>
-    
-//             <main> ${createTeam(team)} </main>
-        
-//         </body>
-//         </html>`;
-//     }
 
